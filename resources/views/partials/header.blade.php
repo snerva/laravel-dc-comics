@@ -14,7 +14,7 @@
 
             <div class="menu_header d-flex">
                 <!-- <a class="{{Route::currentRouteName() === 'characters' ? 'active' : ''}}" href="{{ route('characters')}}">characters</a> -->
-                <!-- <a class="{{Route::currentRouteName() === 'home' ? 'active' : ''}}" href="{{ route('home')}}">comics</a> -->
+                <a class="{{Route::currentRouteName() === 'comics' ? 'active' : ''}}" href="{{ route('comics')}}">comics</a>
                 <!-- <a class="{{Route::currentRouteName() === 'movies' ? 'active' : ''}}" href="{{ route('movies')}}">movies</a>
                 <a class="{{Route::currentRouteName() === 'tv' ? 'active' : ''}}" href="{{ route('tv')}}">tv</a>
                 <a class="{{Route::currentRouteName() === 'games' ? 'active' : ''}}" href="{{ route('games')}}">games</a>
@@ -23,6 +23,7 @@
                 <a class="{{Route::currentRouteName() === 'fans' ? 'active' : ''}}" href="{{ route('fans')}}">fans</a>
                 <a class="{{Route::currentRouteName() === 'news' ? 'active' : ''}}" href="{{ route('news')}}">news</a>
                 <a class="{{Route::currentRouteName() === 'shop' ? 'active' : ''}}" href="{{ route('shop')}}">shop <span class="triangle-down">▼</span></a> -->
+                <a class="nav-link" href="{{ route('comics.index') }}">Admin</a>
             </div>
 
             <div class="search text-end">
