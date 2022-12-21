@@ -1,1 +1,74 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-stretch: semi-condensed;
+    font-weight: 600;
+
+}
+
+.container {
+    width: 80%;
+    max-width: 1300px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+img {
+    max-width: 100%;
+}
+
+header {
+    .navbar_top {
+        background-color: #0282f9;
+
+        a {
+            text-decoration: none;
+            font-size: 12px;
+            padding: 0.5rem 0 0.5rem 3rem;
+            color: white;
+            text-transform: uppercase;
+        }
+    }
+
+    // .logo img {
+    //     height: 80px;
+    // }
+
+    a {
+        text-decoration: none;
+        padding: 2.75rem 1rem;
+        color: black;
+        text-transform: uppercase;
+
+        &:hover {
+            border-bottom: 5px solid #0282f9;
+            color: #0282f9;
+        }
+
+        &.active {
+            border-bottom: 5px solid #0282f9;
+            color: #0282f9;
+        }
+
+        .triangle-down {
+            color: #0282f9;
+        }
+    }
+
+    .search {
+        border-bottom: 2px solid #0282f9;
+        width: 120px;
+
+        input {
+            border-style: none;
+        }
+    }
+
+}
