@@ -7,7 +7,7 @@
     <div class="container py-2">
         <h3>Add a new Comic</h3>
 
-        <form action="{{route('store')}}" method="post">
+        <form action="{{route('comics.store')}}" method="post">
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>

@@ -5,8 +5,15 @@
     <div class="container">
         <div class="heading d-flex justify-content-between">
             <h2>Comics</h2>
-            <div><a href="" class="btn btn-primary">Add Comics</a></div>
+            <div><a href="{{route('comics.create')}}" class="btn btn-primary">Add Comics</a></div>
         </div>
+
+        @if(session('message'))
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <strong>{{session('message')}}</strong>
+        </div>
+        @endif
 
         <div class="table-responsive-md">
             <table class="table table-striped table-primary align-middle table-hover table-borderless">
@@ -35,8 +42,8 @@
                         <td>{{$comic->sale_date}}</td>
                         <td>{{$comic->type}}</td>
                         <td class="d-flex flex-column gap-2">
-                            <a href="{{route('show',$comic->id)}}" class="btn btn-primary view"><i class="fa-regular fa-eye px-1"></i></a>
-                            <a href="" class="btn btn-secondary edit"><i class="fa-regular fa-pen-to-square px-1"></i></a>
+                            <a href="{{route('comics.show',$comic->id)}}" class="btn btn-primary view"><i class="fa-regular fa-eye px-1"></i></a>
+                            <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-secondary edit"><i class="fa-regular fa-pen-to-square px-1"></i></a>
                             <a href="" class="btn btn-danger delete"><i class="fa-solid fa-trash px-1"></i></a>
                         </td>
                     </tr>

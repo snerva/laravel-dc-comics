@@ -15,7 +15,7 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $comics = Comic::orderByDesc('id')->get;
+        $comics = Comic::all();
         return view('admin.comics.index', compact('comics'));
     }
 
@@ -37,18 +37,17 @@ class ComicController extends Controller
      */
     public function store(StoreComicRequest $request)
     {
-        // $data = [
-        //     'title' => $request['title'],
-        //     'title' => $request['description'],
-        //     'title' => $request['thumb'],
-        //     'title' => $request['price'],
-        //     'title' => $request['series'],
-        //     'title' => $request['sale_date'],
-        //     'title' => $request['type']
-        // ];
+        $comic = new Comic();
+        $comic->title = $request['title'];
+        $comic->description = $request['description'];
+        $comic->thumb = $request['thumb'];
+        $comic->price = $request['price'];
+        $comic->series = $request['series'];
+        $comic->sale_date = $request['sale_date'];
+        $comic->type = $request['type'];
+        $comic->save();
 
-        // Comic::create($data);
-        // return redirect()->route('index');
+        return to_route('comics.index');
     }
 
     /**
@@ -59,7 +58,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        return view('admin.comics.show', compact('comic'));
+        return view('comics.show', compact('comic'));
     }
 
     /**
@@ -70,7 +69,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -82,7 +81,19 @@ class ComicController extends Controller
      */
     public function update(UpdateComicRequest $request, Comic $comic)
     {
-        //
+        $data = [
+            'title' => $request['title'],
+            'description' => $request['description'],
+            'thumb' => $request['thumb'],
+            'price' => $request['price'],
+            'series' => $request['series'],
+            'sale_date' => $request['sale_date'],
+            'type' => $request['type'],
+        ];
+
+        $comic->update($data);
+
+        return to_route('comics.index')->with('message', "$comic->title update successfully!");
     }
 
     /**

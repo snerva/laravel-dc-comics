@@ -9,21 +9,21 @@
 
         <div class="navbar_header d-flex justify-content-between align-items-center">
             <div class="logo p-3">
-                <img src="" alt="">
+                <img src="{{ Vite::asset('resources/images/dc-logo.png')}}" alt="">
             </div>
 
             <div class="menu_header d-flex">
-                <!-- <a class="{{Route::currentRouteName() === 'characters' ? 'active' : ''}}" href="{{ route('characters')}}">characters</a> -->
+                <a class="{{Route::currentRouteName() === 'characters' ? 'active' : ''}}" href="#">characters</a>
                 <a class="{{Route::currentRouteName() === 'comics' ? 'active' : ''}}" href="{{ route('comics')}}">comics</a>
-                <!-- <a class="{{Route::currentRouteName() === 'movies' ? 'active' : ''}}" href="{{ route('movies')}}">movies</a>
-                <a class="{{Route::currentRouteName() === 'tv' ? 'active' : ''}}" href="{{ route('tv')}}">tv</a>
-                <a class="{{Route::currentRouteName() === 'games' ? 'active' : ''}}" href="{{ route('games')}}">games</a>
-                <a class="{{Route::currentRouteName() === 'collectibles' ? 'active' : ''}}" href="{{ route('collectibles')}}">collectibles</a>
-                <a class="{{Route::currentRouteName() === 'videos' ? 'active' : ''}}" href="{{ route('videos')}}">videos</a>
-                <a class="{{Route::currentRouteName() === 'fans' ? 'active' : ''}}" href="{{ route('fans')}}">fans</a>
-                <a class="{{Route::currentRouteName() === 'news' ? 'active' : ''}}" href="{{ route('news')}}">news</a>
-                <a class="{{Route::currentRouteName() === 'shop' ? 'active' : ''}}" href="{{ route('shop')}}">shop <span class="triangle-down">▼</span></a> -->
-                <a class="nav-link" href="{{ route('comics.index') }}">Admin</a>
+                <a class="{{Route::currentRouteName() === 'movies' ? 'active' : ''}}" href="#">movies</a>
+                <a class="{{Route::currentRouteName() === 'tv' ? 'active' : ''}}" href="">tv</a>
+                <a class="{{Route::currentRouteName() === 'games' ? 'active' : ''}}" href="">games</a>
+                <a class="{{Route::currentRouteName() === 'collectibles' ? 'active' : ''}}" href="">collectibles</a>
+                <a class="{{Route::currentRouteName() === 'videos' ? 'active' : ''}}" href="">videos</a>
+                <a class="{{Route::currentRouteName() === 'fans' ? 'active' : ''}}" href="">fans</a>
+                <a class="{{Route::currentRouteName() === 'news' ? 'active' : ''}}" href="">news</a>
+                <a class="{{Route::currentRouteName() === 'shop' ? 'active' : ''}}" href="">shop <span class="triangle-down">▼</span></a>
+                <a class="" href="{{ route('comics.index') }}">Admin</a>
             </div>
 
             <div class="search text-end">
