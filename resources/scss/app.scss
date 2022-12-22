@@ -72,3 +72,144 @@ header {
     }
 
 }
+
+main {
+    .main_contents {
+        background-color: #1c1c1c;
+
+        .main_banner {
+            background-image: url(../images/jumbotron.jpg);
+            background-position: top;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 400px;
+        }
+
+        .label {
+            width: fit-content;
+            background-color: #0282f9;
+
+            h2 {
+                color: white;
+                text-transform: uppercase;
+                padding: 1rem;
+                margin-top: -2rem;
+            }
+        }
+
+        .comics {
+            padding: 1.5rem;
+            text-transform: uppercase;
+            color: $light;
+
+            img {
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                object-position: top;
+            }
+
+            p {
+                padding: 1rem 0;
+            }
+
+            .load_btn {
+                margin-top: 2rem;
+                text-align: center;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                    background-color: #0282f9;
+                }
+            }
+
+        }
+    }
+
+    .menu_panel {
+        background-color: #0282f9;
+        height: 155px;
+        text-transform: uppercase;
+
+        .mp {
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            height: 60px;
+        }
+
+        .power_visa img {
+            height: 40px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            padding: 1rem;
+        }
+    }
+}
+
+footer {
+    .footer_top {
+        background-image: url(../images/footer-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .footer_menu {
+            background-image: url(../images/dc-logo-bg.png);
+            background-repeat: no-repeat;
+            background-position: right;
+
+            .row {
+                padding: 1rem 0 1.75rem 0;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            h3 {
+                margin: 1rem 0;
+                text-transform: uppercase;
+                color: white;
+            }
+
+            a {
+                font-weight: 400;
+                text-decoration: none;
+                color: #797979;
+                line-height: 1rem;
+            }
+        }
+
+    }
+
+
+
+    .footer_bottom {
+        background-color: #464646;
+        padding: 1rem;
+
+        button {
+            padding: 0.5rem;
+            font-size: 1rem;
+            color: white;
+            text-transform: uppercase;
+            background: none;
+            border: 2px solid #0282f9;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            color: #0282f9;
+            margin: 0.5rem;
+        }
+
+        img {
+            margin: 0.5rem;
+        }
+    }
+}
