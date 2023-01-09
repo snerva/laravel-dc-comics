@@ -33,4 +33,17 @@ class StoreComicRequest extends FormRequest
             'type' => ['required', 'max:255'],
         ];
     }
+    public function messages()
+    {
+        return [
+            'title.required' => "Il titolo é obbligatorio",
+            'title.min' => "Il titolo deve essere almeno di :min caratteri",
+            'title.max' => "Il titolo deve essere almeno di :max caratteri",
+            'description.min' => "La descrizione deve essere almeno di :min caratteri",
+            'thumb.max' => "L'immagine  deve essere almeno di :max caratteri",
+            'series.max' => "La serie deve essere almeno di :max caratteri",
+            'sale_date.max' => "La data deve essere almeno di :max caratteri",
+            'type.max' => "La tipologia deve essere almeno di :max caratteri",
+        ];
+    }
 }
